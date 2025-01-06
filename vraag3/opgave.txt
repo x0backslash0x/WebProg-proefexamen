@@ -1,0 +1,47 @@
+Je maakt een express webserver waarbij je in een mysql database bordspelen gaat stockeren.
+
+Je hebt hiervoor één tabel nodig : bordspelen. Zie voor de SQL query om deze aan te maken onderaan.
+
+Maak een routing bestand bordspelen_api.ts aan, want je gebruikt routing en schrijft je API's voor de bordspelen niet rechtstreeks in je server bestand.
+
+Voorzie op je routing volgende zaken:
+
+    get route om alle bordspelen op te vragen in JSON formaat
+    post route om één bordspel toe te voegen, de gegevens komen binnen in JSON formaat
+    get route om alle bordspelen op te vragen van hetzelfde jaar, het jaar krijg je mee in het path als path parameter
+
+Je werkt met async/await om je database aan te spreken. Lukt het je niet om met een database te werken, dan werk je met een interne array en verlies je het punt voor correct gebruik database (zie puntenverdeling).
+
+Puntenverdeling:
+
+    [1] correct gebruik van routing
+    [1] correct gebruik van database
+    [1] get route voor alle bordspelen in JSON formaat
+    [1] post route voor bordspel met JSON input
+    [1] get route voor alle bordspelen van één jaar met path parameter in JSON formaat
+
+
+De JSON voor je post bordspel ziet er als volgt uit: 
+
+{
+    "title": "Catan",
+    "author": "Klaus Teuber",
+ "year": 1995,
+ "bgg_score": 7.2
+}
+
+De SQL commando's die je nodig hebt zijn: 
+
+CREATE TABLE `<jouwschemanaam>`.`boardgames` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `author` VARCHAR(45) NOT NULL,
+  `year` INT NOT NULL,
+  `bggscore` DECIMAL(4,2) NOT NULL,
+  PRIMARY KEY (`id`));
+
+SELECT * FROM boardgames;
+
+SELECT * FROM boardgames where year = ?;
+
+INSERT INTO boardgames(title, author, year, bggscore) VALUES(? , ? , ?, ?);
