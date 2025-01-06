@@ -1,0 +1,66 @@
+Je krijgt een lijst met bordspellen in JSON formaat. 
+
+Gebruik array methods (zoals map, filter, sort, reduce, findIndex, enzovoort) om onderstaande vragen op te lossen. 
+
+Je mag geen forEach of for loops gebruiken. Gebruik method chaining waar mogelijk.
+
+    [1] Schrijf interfaces voor de array
+    [1] Maak een nieuwe array van bordspelen die een video game - adaptatie hebben
+    [1] Sorteer deze spellen eerst op jaar van uitgave van het bordspel (year) en daarna op het jaar van de adaptatie (adaptations.year).
+    [1] Verander elk object van de array zodat 
+        in de titel tussen haakjes staat hoeveel uitbreidingen deze heeft, bv "Catan (2)" 
+        je enkel de velden title en year over houdt
+        je een extra veld toevoegt "spiel" waar je true invult indien de prijs (award) "Spiel des Jahres" hebben gewonnen en false indien niet gewonnen.
+    [1] Gebruik method chaining
+
+[
+  {
+    title: "Catan",
+    year: 1995,
+    expansions: ["Seafarers", "Cities & Knights"],
+    awards: ["Spiel des Jahres"],
+    adaptations: { type: "video game", year: 2005 }
+  },
+  {
+    title: "Pandemic",
+    year: 2008,
+    expansions: ["On the Brink", "In the Lab"],
+    awards: ["Golden Geek", "Spiel des Jahres"],
+    adaptations: { type: "video game", year: 2013 }
+  },
+  {
+    title: "Gloomhaven",
+    year: 2017,
+    expansions: ["Forgotten Circles"],
+    awards: ["Golden Geek"],
+    adaptations: {}
+  },
+  {
+    title: "Ticket to Ride - Europe",
+    year: 2005,
+    expansions: [],
+    awards: ["Spiel des Jahres"],
+    adaptations: { type: "video game", year: 2006 }
+  },
+  {
+    title: "Twilight Imperium - Fourth Edition",
+    year: 2017,
+    expansions: ["Prophecy of Kings"],
+    awards: ["Golden Geek"],
+    adaptations: {}
+  },
+  {
+    title: "Carcassonne",
+    year: 2000,
+    expansions: ["Inns & Cathedrals", "Traders & Builders"],
+    awards: ["Spiel des Jahres"],
+    adaptations: { type: "video game", year: 2012 }
+  },
+  {
+    title: "Azul",
+    year: 2017,
+    expansions: [],
+    awards: ["Spiel des Jahres", "Golden Geek"],
+    adaptations: {}
+  }
+]
