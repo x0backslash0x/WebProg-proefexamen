@@ -1,0 +1,55 @@
+Je gaat een eenvoudige CLI-applicatie bouwen waarin gebruikers interactie hebben met een lijst van bordspellen. De app maakt gebruik van modules om de code overzichtelijk te houden. De applicatie biedt de volgende functionaliteiten:
+
+    Bordspellen bekijken: Toon een lijst van beschikbare bordspellen.
+    Een bordspel toevoegen: Voeg een nieuw bordspel toe door invoer van de gebruiker.
+    Bordspellen filteren op BoardGameGeek score: Toon bordspellen met een score hoger dan een bepaalde waarde.
+
+De uitvoering van je applicatie is als volgt:
+
+🎲 Welkom bij het Bordspelbeheer Systeem 🎲
+
+--- Menu ---
+1. Toon alle bordspellen
+2. Voeg een nieuw bordspel toe
+3. Filter bordspellen op minimale score
+4. Afsluiten
+Maak een keuze (1-4): 1
+
+--- Beschikbare Bordspellen ---
+1. Catan - Auteur: Klaus Teuber - BGG Score: 7.2
+2. Gloomhaven - Auteur: Isaac Childres - BGG Score: 8.8
+3. Pandemic - Auteur: Matt Leacock - BGG Score: 7.6
+4. Terraforming Mars - Auteur: Jacob Fryxelius - BGG Score: 8.4
+
+Je bestandsstructuur ziet er als volgt uit:
+
+bordspel-app/
+│
+├── bordspellen.ts       (Exporteren van bordspellen data)
+├── functies.ts          (Exporteren van functies voor data-interactie)
+└── app.ts               (Hoofdapplicatie, user input via readline-sync)
+
+Je krijgt de inhoud van bordspellen.ts al van ons:
+
+// Bordspel interface
+export interface Bordspel {
+  title: string;
+  author: string;
+  bgg_score: number;
+}
+
+// Lijst met bordspellen
+export const bordspellen: Bordspel[] = [
+  { title: "Catan", author: "Klaus Teuber", bgg_score: 7.2 },
+  { title: "Gloomhaven", author: "Isaac Childres", bgg_score: 8.8 },
+  { title: "Pandemic", author: "Matt Leacock", bgg_score: 7.6 },
+  { title: "Terraforming Mars", author: "Jacob Fryxelius", bgg_score: 8.4 }
+];
+
+Puntenverdeling
+
+    [1] correct gebruik van modules voor functies en bordspelen
+    [1] werkende menu in app.ts
+    [1] functie voor menupunt 1
+    [1] functie voor menupunt 2
+    [1] functie voor menupunt 3

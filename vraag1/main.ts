@@ -4,7 +4,7 @@
  * BA Electronica-ICT/Cybersecurity
  * OLOD Web programming
  *
- * oefenexamen
+ * oefenexamen vraag 1
 **/
 
 import { boardgames } from "./bordspelen";
