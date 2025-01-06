@@ -19,15 +19,18 @@ interface Boardgame {
     year: number;
     expansions: string[];
     awards: string[];
-    adaptations: Adaptation[];
+    adaptations: Adaptation | any;
 }
 
+// console.log(Object.keys(boardgames[2].adaptations).length)
+// boardgames.forEach((b: Boardgame) => console.log(`${b.title} adaptations: ${Object.keys(b.adaptations).length}`))
+
 // NIeuwe array voor videogame adaptations
-// let BoardgamesWithAdaptations: Boardgame[] = boardgames.filter((b: Boardgame) => b.adaptations.length > 0)
+const boardgamesWithAdaptations: Boardgame[] = boardgames.filter((b: Boardgame) => Object.keys(b.adaptations).length > 0);
+// console.log(boardgamesWithAdaptations);
 
 
-// Bordspelen sorteren
-
+// Bordspelen sorteren (op jaar van uitgaven en jaar van adaptation)
 boardgames.sort((a, b) => {
     let yeara = a.year;
     let yearb = b.year
@@ -40,4 +43,10 @@ boardgames.sort((a, b) => {
     }
 });
 
-console.log(boardgames);
+// veld aanpassen (titel)
+
+// velden verwijder
+
+// veld toevoegen (speil)
+
+// console.log(boardgames);
