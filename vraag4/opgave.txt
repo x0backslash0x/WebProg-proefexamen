@@ -1,0 +1,27 @@
+/* opgave.ts
+ *
+ * 2024-2025 Patrick Lanove
+ * BA Electronica-ICT/Cybersecurity
+ * OLOD Web programming
+ *
+ * oefenexamen vraag 4
+**/
+
+We willen graag de inhoud van een JSON bestand mooi weergeven op een HTML pagina.
+
+Je maakt hiervoor een VITE project aan en gebruikt fetch om de informatie op te halen van: https://theorie-webprogramming.surge.sh/boardgames.json
+
+Je sorteert de gegevens op boardgamegeek score (bgg_score) en toont de gegevens in een HTML tabel met kolommen:
+
+    score -> bgg_score
+    titel -> title
+    uitgave jaar -> year
+    auteur -> author
+    prijzen -> aantal awards : je telt dus hoeveel prijzen gewonnen zijn. Dat is dan 0, 1 of 2.
+
+Puntenverdeling
+
+    [1] VITE project opzetten en data ophalen via fetch
+    [1] Correcte interfaces maken
+    [2] Weergave data in HTML
+    [1] Sortering op bgg_score
