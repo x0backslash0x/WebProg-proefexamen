@@ -31,7 +31,7 @@ const boardgamesWithAdaptations: Boardgame[] = boardgames.filter((b: Boardgame) 
 
 
 // Bordspelen sorteren (op jaar van uitgaven en jaar van adaptation)
-boardgames.sort((a, b) => {
+boardgamesWithAdaptations.sort((a, b) => {
     let yeara = a.year;
     let yearb = b.year
     if ( yeara < yearb ) {
@@ -41,7 +41,18 @@ boardgames.sort((a, b) => {
     } else {
         return 0;
     }
-});
+})
+/* .sort((a, b) => {
+    let yeara = a.adaptations.year;
+    let yearb = b.adaptations.year
+    if ( yeara < yearb ) {
+        return -1;
+    } else if ( yeara > yearb ) {
+        return 1;
+    } else {
+        return 0;
+    }
+}) */;
 
 // veld aanpassen (titel)
 
@@ -50,3 +61,4 @@ boardgames.sort((a, b) => {
 // veld toevoegen (speil)
 
 // console.log(boardgames);
+console.log(boardgamesWithAdaptations);
