@@ -7,7 +7,7 @@
  * oefenexamen
 **/
 
-export let bordspelen = [
+export let boardgames = [
   {
     title: "Catan",
     year: 1995,
