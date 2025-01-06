@@ -6,3 +6,18 @@
  *
  * oefenexamen
 **/
+
+import { bordspelen } from "./bordspelen";
+
+interface adaptation {
+    type: string;
+    year: number
+}
+
+interface bordspel {
+    title: string;
+    year: number;
+    expansions: string[];
+    awards: string[];
+    adaptations: adaptation[];
+}
