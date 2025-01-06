@@ -6,3 +6,6 @@
  *
  * oefenexamen vraag 2
 **/
+
+import { Bordspel, bordspellen } from "./bordspellen";
+import "./functies";
